@@ -1,0 +1,100 @@
+/* General Setup */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    /* A nice dark gradient background */
+    background: linear-gradient(to right, #2c3e50, #000000);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    /* This creates the 3D space */
+    perspective: 1000px;
+}
+
+/* The Card Styling */
+.card {
+    background-color: #1e1e1e;
+    color: white;
+    width: 300px;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    border: 1px solid #d4af37; /* Gold border */
+    
+    /* The Animation Transition */
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* THE 3D EFFECT: This happens when you put your mouse on the card */
+.card:hover {
+    /* Pops the card up and tilts it slightly */
+    transform: translateY(-10px) rotateX(5deg);
+    box-shadow: 0 20px 40px rgba(212, 175, 55, 0.3); /* Gold glow */
+    cursor: pointer;
+}
+
+/* Image Styling */
+.card-image img {
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #d4af37; /* Gold border around image */
+}
+
+/* Text Styling */
+h1 {
+    margin-top: 15px;
+    font-size: 24px;
+    color: #d4af37; /* Gold text */
+}
+
+h2 {
+    font-size: 16px;
+    color: #a0a0a0;
+    margin-bottom: 10px;
+}
+
+.dates {
+    font-style: italic;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.bio {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Link/Button Styling */
+.links a {
+    text-decoration: none;
+    background-color: #d4af37;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 12px;
+    margin: 5px;
+    display: inline-block;
+}
+
+.links a:hover {
+    background-color: white;
+}
+
+.links .github-link {
+    background-color: transparent;
+    border: 1px solid #d4af37;
+    color: #d4af37;
+}
+
+.links .github-link:hover {
+    background-color: #d4af37;
+    color: black;
+}
